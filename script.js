@@ -1,15 +1,18 @@
-var Pelicula = /** @class */ (function () {
-    function Pelicula(nombre, protagonistas, actores) {
+var Sorteo = /** @class */ (function () {
+    function Sorteo(nombre) {
         this.nombre = nombre;
-        this.protagonistas = protagonistas;
-        this.actores = actores;
     }
-    Pelicula.prototype.proyectarEnCine = function () {
-        console.log("Proyectando en Cine ".concat(this.nombre));
+    Sorteo.prototype.setTicket = function (numero) {
+        this.ticket = numero;
     };
-    return Pelicula;
+    Sorteo.prototype.getTicket = function () {
+        return this.ticket;
+    };
+    Sorteo.prototype.sortear = function () {
+        return "Para este nombre ".concat(this.nombre, " el numero es: ").concat(this.getTicket());
+    };
+    return Sorteo;
 }());
-var pelicula = new PeliculaC("barbie", ["barbie", "ken"], ["margot robbie", "ryan gosling"]);
-var pelicula1 = new PeliculaC("Oppenheimer", ["Oppenheimer", "Straus"], ["Cillian Murphy", "Robert Downey Jr."]);
-pelicula.proyectarEnCine();
-console.log(pelicula1);
+var sorteo = new Sorteo("Lautaro");
+sorteo.setTicket("S22");
+console.log(sorteo.sortear());
