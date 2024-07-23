@@ -3,9 +3,9 @@ import { ListaTareas } from './ListaTareas'
 
 export const ToDoApp = () => {
 
-    const [nuevaTarea, setNuevaTarea] = useState<String>("")
+    const [nuevaTarea, setNuevaTarea] = useState<string>("")
 
-    const [listaTareas, setListaTareas] = useState<String[]>([])
+    const [listaTareas, setListaTareas] = useState<string[]>([])
 
     const handleAddTask = (e:React.FormEvent) => {
         e.preventDefault()
