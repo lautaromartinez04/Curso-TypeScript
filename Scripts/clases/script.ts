@@ -1,4 +1,4 @@
-class Pelicula{
+class PeliculaC{
     nombre?: string;
     protagonistas?: string[];
     actores?: string[];
@@ -14,8 +14,8 @@ class Pelicula{
     }
 }   
 
-const pelicula = new PeliculaC("barbie",["barbie","ken"],["margot robbie","ryan gosling"]);
-const pelicula1 = new PeliculaC("Oppenheimer", ["Oppenheimer", "Straus"], ["Cillian Murphy", "Robert Downey Jr."]);
+const peliculaC = new PeliculaC("barbie",["barbie","ken"],["margot robbie","ryan gosling"]);
+const peliculaC1 = new PeliculaC("Oppenheimer", ["Oppenheimer", "Straus"], ["Cillian Murphy", "Robert Downey Jr."]);
 
-pelicula.proyectarEnCine();
+pelicula1.proyectarEnCine();
 console.log(pelicula1)

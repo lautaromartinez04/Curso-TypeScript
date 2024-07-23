@@ -1,23 +1,15 @@
-"use strict";
-let intermiami = 11;
-let dalas = 10;
-let messi = 1;
-let juegamessi = false;
-let palabras = "me emocione al verlo a messi";
-function jugar(equipo1, equipo2, juegamessi) {
-    let motivo = "";
-    if (juegamessi) {
-        equipo1 += messi;
-        motivo = "por que juega messi";
+var Pelicula = /** @class */ (function () {
+    function Pelicula(nombre, protagonistas, actores) {
+        this.nombre = nombre;
+        this.protagonistas = protagonistas;
+        this.actores = actores;
     }
-    if (equipo1 > equipo2) {
-        console.log(`gano el inter Miami ${motivo}`);
-    }
-    else if (equipo1 < equipo2) {
-        console.log("Gano el equipo 2");
-    }
-    else {
-        console.log("Empate");
-    }
-}
-jugar(intermiami, dalas, juegamessi);
+    Pelicula.prototype.proyectarEnCine = function () {
+        console.log("Proyectando en Cine ".concat(this.nombre));
+    };
+    return Pelicula;
+}());
+var pelicula = new PeliculaC("barbie", ["barbie", "ken"], ["margot robbie", "ryan gosling"]);
+var pelicula1 = new PeliculaC("Oppenheimer", ["Oppenheimer", "Straus"], ["Cillian Murphy", "Robert Downey Jr."]);
+pelicula.proyectarEnCine();
+console.log(pelicula1);
